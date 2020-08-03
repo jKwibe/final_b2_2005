@@ -35,5 +35,17 @@ RSpec.describe "Passanger Show" do
          click_on "23456"
          expect(current_path).to  eq("/flights/#{@flight_3.id}")
      end
+
+     it "has form to add flight" do
+        visit "/passangers/#{@passanger_3.id}" 
+        
+        select "34567", from: :flight_number
+
+        click_on "submit"
+
+        expect(page).to  have_link("34567")
+        
+     end
+     
      
 end

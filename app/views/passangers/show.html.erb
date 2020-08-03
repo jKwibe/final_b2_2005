@@ -4,3 +4,9 @@
 <%  @passanger.flights.each do |flight| %>
     <p>Flight =>  <%= link_to flight.number, "/flights/#{flight.id}" %></p>
 <% end %>
+
+
+<%= form_tag"/passangers/#{@passanger.id}/flight", method: :post do %>
+    <%= select_tag :flight_number, options_from_collection_for_select(Flight.all, :id, :number), prompt: "Select something"%>
+    <%= submit_tag 'submit'%>
+<% end %>
