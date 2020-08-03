@@ -207,6 +207,7 @@
           1,
           null,
           1,
+          1,
           null
         ]
       },
@@ -258,9 +259,8 @@
           null
         ]
       },
-      "/Users/kwibemerci/turing_school/module_2/assesments/final_b2_2005/app/controllers/flights_controller.rb": {
+      "/Users/kwibemerci/turing_school/module_2/assesments/final_b2_2005/app/controllers/passangers_controller.rb": {
         "lines": [
-          null,
           1,
           1,
           1,
@@ -275,8 +275,19 @@
           1,
           null
         ]
+      },
+      "/Users/kwibemerci/turing_school/module_2/assesments/final_b2_2005/app/controllers/flights_controller.rb": {
+        "lines": [
+          null,
+          1,
+          1,
+          1,
+          null,
+          null,
+          null
+        ]
       }
     },
-    "timestamp": 1596470959
+    "timestamp": 1596471911
   }
 }

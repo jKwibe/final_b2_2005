@@ -1,0 +1,6 @@
+<h1><%= @passanger.name %></h1>
+
+<h3> Flights </h3>
+<%  @passanger.flights.each do |flight| %>
+    <p>Flight =>  <%= link_to flight.number, "/flights/#{flight.id}" %></p>
+<% end %>
