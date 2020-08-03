@@ -7,6 +7,7 @@ RSpec.describe Flight, type: :model do
     it { should validate_presence_of :time }
     it { should validate_presence_of :dep_city }
     it { should validate_presence_of :arr_city }
+    it { should validate_uniqueness_of :number }
   end
 
   describe "relationships" do

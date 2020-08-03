@@ -12,9 +12,9 @@ RSpec.describe "Flight Show" do
        @flight_5 = @frontier.flights.create(number: "56789", date: "30/11/20", time: "13:00", dep_city: "Califonia", arr_city: "Boston")
        @flight_6 = @delta.flights.create(number: "09876", date: "04/10/21", time: "16:00", dep_city: "Denver", arr_city: "Newyork City")
 
-       @passanger_1 = Passanger.create(name: "Kwibe", age:"27")
-       @passanger_2 = Passanger.create(name: "Merci", age:"22")
-       @passanger_3 = Passanger.create(name: "Ngena", age:"34")
+       @passanger_1 = Passanger.create(name: "Kwibe", age:"12")
+       @passanger_2 = Passanger.create(name: "Merci", age:"17")
+       @passanger_3 = Passanger.create(name: "Ngena", age:"13")
        @passanger_4 = Passanger.create(name: "Dan", age:"44")
 
        @passanger_4.flights << [@flight_2, @flight_3]
@@ -38,6 +38,13 @@ RSpec.describe "Flight Show" do
             expect(page).to  have_content("Kwibe")
             expect(page).to  have_content("Ngena")
 
+    end
+
+    it "number of minors and adults" do
+      visit "/flights/#{@flight_3.id}"  
+
+      expect(page).to  have_content("Adult Passangers: 1")
+      expect(page).to  have_content("Minor Passangers: 3")
     end
     
 end
